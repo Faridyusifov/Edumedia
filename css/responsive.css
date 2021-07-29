@@ -53,7 +53,7 @@
     .section_header{
         flex-direction: column;
         align-items: flex-start;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
     .section_header_container{
         max-width: 100%;
@@ -86,16 +86,19 @@
 @media screen and (max-width:992px) {
     .sidebar{
         width: 100%;
-        height: 73px;
-        /* border-bottom: 1px solid #dbdbdb; */
+        height: 60px;
+        border-bottom: 1px solid #303030;
         min-height: 0;
-        /* position: absolute; */
+        position: sticky !important;
+        top: -73px;
         border-right: none;
     }
-    /* .sidebar_bg_light{
-        background-color: #ffffff;
+    .sidebar.add{
+        top: 0;
+    }
+    .sidebar_bg_light{
         border-bottom: 1px solid #DBDBDB;
-    } */
+    }
     .sidebar_mobile_bg_light {
         background-color: #FFFFFF;
         border-right: 1px solid #DBDBDB;
@@ -118,13 +121,14 @@
     }
     .sidebar_icon{
         display: flex;
-        align-items: baseline;
+        align-items: center;
     }
     .sidebar_icon_text{
         display: block;
         color: #FFFFFF;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 500;
+        margin-top: -4px;
     }
     .sidebar_icon_text_clr{
         color: #151515;
@@ -137,12 +141,18 @@
     }
     .onclick_sidebar{
         padding: 20px 15px 0px 15px;
-        top: 73px;
-        height: calc(100vh - 70px);
+        top: 60px;
+        height: calc(100% - 60px);
+        min-height: calc(100vh - 60px);
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: flex-start;
+        overflow-y: auto;
     }
     .onclick_sidebar_body{
         padding: 0;
-        justify-content: flex-start;
+        justify-content: unset;
     }
     .onclick_sidebar_header{
         display: none;
@@ -150,26 +160,26 @@
     .onclick_sidebar_lang{
         margin-left: -10px;
     }
-    .onclick_sidebar_footer{
+    .onclick_sidebar_footer_body{
         display: none;
     }
     .onclick_sidebar_content{
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: flex-start;
         padding-top: 20px;
     }
-    /* .onclick_sidebar_content_item{
-        width: 100%;
-    } */
+    .onclick_sidebar_content_item{
+        width: 100% !important;
+    }
     .onclick_section_footer{
         padding-top: 25px;
         padding-bottom: 30px;
     }
     .onclick_sidebar_content_item{
-        padding: 0px;
+        padding: 0px 10px;
     }
     .onclick_sidebar_content_item a {
-        padding: 10px 0px;
+        padding: 10px 0px 10px 0px;
         display: block;
         color: #ffffff;
         font-size: 36px;
@@ -210,7 +220,7 @@
     }
     .container{
         margin-left: 0;
-        margin-top: 73px;
+        /* margin-top: 60px; */
     }
 
 
@@ -226,8 +236,22 @@
     }
 
     .header{
+        /* height: 100%;
+        padding-bottom: 220px; */
+        padding: 45px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 60px);
+    }
+    .header_container{
+        padding-top: 0;
+    }
+    .header_body{
+        display: flex;
+        flex-direction: column;
         height: 100%;
-        padding-bottom: 220px;
+        justify-content: center;
     }
     .header_icon{
         display: none;
@@ -260,6 +284,10 @@
     }
 
     /* banner start */
+
+    .banner {
+        padding-top: 30px;
+    }
     .banner_content{
         display: none;
     }
@@ -269,7 +297,7 @@
     .banner_content_mobile{
         display: flex;
         flex-direction: column;
-        padding: 25px 0px 25px 0px;
+        padding: 0px 0px 25px 0px;
     }
 
     /* banner finish */
@@ -278,8 +306,12 @@
 
     .case_studies{
         padding-top: 70px;
-        padding-bottom: 140px;
+        padding-bottom: 100px;
         position: relative;
+    }
+    .case_studies_content{
+        margin-bottom: 40px;
+        margin-top: 20px;
     }
     .case_studies_slider{
         margin-left: -55px;
@@ -296,12 +328,16 @@
         font-size: 16px;
         line-height: 20px;
     }
+    .case_studies_footer{
+        display: none;
+    }
     /* case studies finish */
 
 
     /* customer start */
     .customers{
         padding-bottom: 60px;
+        padding-top: 40px;
         position: relative;
     }
     .customer_content_item{
@@ -380,7 +416,7 @@
         padding-bottom: 40px;
     }
     .footer_content{
-        margin-right: 30px;
+        margin-right: 0px;
     }
     .footer_explore{
         flex: 0 0 50%;
@@ -416,7 +452,7 @@
         padding: 30px 10px;
         max-width: 100%;
     }
-    .footer_tag{
+    .footer_bottom_right{
         flex: 0 0 50%;
     }
     /* footer finish */
@@ -441,12 +477,12 @@
         padding-bottom: 90px;
     }
     .contact_left{
-        max-width: 100%;
+        width: 100%;
     }
     .contact_right{
         /* width: 100%; */
         padding-left: 0;
-        margin-top: 20px;
+        margin-top: 60px;
     }
     .page_header_topic{
         font-size: 36px;
@@ -688,12 +724,15 @@
     }
     .expertise{
         padding-top: 60px;
+        position: relative;
         /* padding-bottom: 50px; */
     }
-    .expertise_content_item_title{
+    .expertise_content_item_title_tp{
         color: var(--color-00aeef);
-        text-decoration: underline;
         transition: all 0.3s;
+    }
+    .expertise_content_item_title_tp::after{
+        background-color: var(--color-00aeef);
     }
     .expertise_content_item_body{
         margin-bottom: 50px;
@@ -736,9 +775,9 @@
         font-size: 36px;
         padding-bottom: 40px;
     }
-    /* .service_left_content_nav_item_link.active{
-        transition: none;
-    } */
+    .service_left_content_nav_item_link + .nav_arrow{
+        opacity: 1;
+    }
 }
 
 /* service.html finished */
@@ -890,7 +929,7 @@
 
 @media screen and (max-width:600px){
     .hardwareDistribution_content_right_body_slide .slick-dots{
-        bottom: 0px;
+        bottom: -10px;
     }
 }
 @media screen and (max-width:992px){
@@ -909,6 +948,9 @@
     .hardwareDistribution_content_right{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .hardwareDistribution_content_right_body_images{
+        padding: 20px 30px;
     }
     .hardwareDistributionCategories_body{
         flex-direction: column;
@@ -930,6 +972,7 @@
     .hardwareDistributionCategories_body_category_item_content{
         padding-bottom: 60px;
     }
+    
 }
 
 /*  */

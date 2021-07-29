@@ -1,21 +1,79 @@
+let lastScrollTop;
+var $body = $('body');
+
 $(document).on('click', '.sidebar_btn', function (e) {
     e.preventDefault()
     $(this).toggleClass('active')
     $('.onclick_sidebar').toggleClass('isOpen')
-    // $('.sidebar').toggleClass('sidebar_bg_dark')
-    // $('.sidebar_menu_icon').toggleClass('sidebar_menu_icon_clr_light')
-    // $('.customerLink').toggleClass('white')
     $('.sidebar_btn').toggleClass('change')
     $('body').toggleClass('overflowY')
     $('.sidebar_icon_text').toggleClass('sidebar_icon_text_clr_light')
-    // $('.customer_btn').toggleClass('customer_btn_light')
+    $('.sidebar').toggleClass('positionSticky')
 })
+
+
+
+
+function handleScrollAnimation() {
+	var $window         = $(window),
+		$app            = $('.app'),
+		scrollElements  = $('[data-section-theme]'),
+		scrollIn        = $window.scrollTop() + ($window.height() - ($window.height() / 5)),
+		scrollOut       = $window.scrollTop() + ($window.height())
+        scrollInScrolled  = $window.width() > 992 ? $window.scrollTop() + ($window.height() - 200) : $window.scrollTop() + ($window.height() - 100),
+		scrollOutScrolled = $window.scrollTop() + ($window.height())
+
+	scrollElements.each(function () {
+		var $this = $(this);
+		if ($this.position().top <= scrollIn && $this.position().top + $this.height() > scrollIn ) {
+			$app.attr('class', $(this).data('section-theme'));
+			$this.addClass("scrolled");
+		}
+		else if ($this.position().top <= scrollOut + $this.height() - 3 && $this.position().top + $this.height() > scrollOut + $this.height() - 3 ) {
+			$this.removeClass("scrolled");
+		}
+	});
+}
+
+$.fn.scrollEnd = function(callback, timeout) {
+	$(this).on('scroll', function(){
+		var $this = $(this);
+		if ($this.data('scrollTimeout')) {
+			clearTimeout($this.data('scrollTimeout'));
+		}
+		$this.data('scrollTimeout', setTimeout(callback,timeout));
+	});
+};
+
+function navbarScrollEndFn() {
+	$('.sidebar').removeClass('add')
+	$(window).scrollEnd(function () {
+		$('.sidebar').addClass('add')
+	}, 100);
+}
+
+$(document).on('scroll', function () {
+    
+	handleScrollAnimation();
+
+	var st = window.pageYOffset || document.documentElement.scrollTop;
+
+	if (st > lastScrollTop){
+        navbarScrollEndFn()
+	}
+    lastScrollTop = st <= 0 ? 0 : st;
+})
+
+
+
+
+
 
 $(document).ready(function(){
     $("#button").click(function() {
         $('html, body').animate({
-            scrollTop: $("#scroll").offset().top
-        }, 1000);
+            scrollTop: $(".banner").offset().top
+        }, 800);
     });
 });
 
@@ -43,20 +101,20 @@ $(window).scroll(function() {
   
     // selectors
     var $window = $(window),
-        $body = $('body'),
+        $body = $('.app'),
         $panel = $('.bgColor');
     
     // Change 50% earlier than scroll position so colour is there when you arrive.
     var scroll = $window.scrollTop() + ($window.height() / 2);
+    var scroll2 = $window.scrollTop() + ($window.height() - 150);
    
     $panel.each(function () {
       var $this = $(this);
-      
+
       // if position is within range of this panel.
       // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
       // Remember we set the scroll to 50% earlier in scroll var.
       if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-            
         // Remove all classes on body with color-
         $body.removeClass(function (index, css) {
           return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
@@ -65,6 +123,14 @@ $(window).scroll(function() {
         // Add class of currently active div
         $body.addClass('color-' + $(this).data('color'));
       }
+
+      if ($this.position().top <= ($window.scrollTop() + ($window.height() - 150)) && $this.position().top + $this.height() > ($window.scrollTop() + ($window.height() - 150))) {
+        $this.addClass("scrolled")
+      }
+      else if ($this.position().top <= ($window.scrollTop() + ($window.height() + $this.height())) && $this.position().top + $this.height() >= ($window.scrollTop() + ($window.height() + $this.height()))) {
+        $this.removeClass("scrolled")
+      }
+      
     });    
     
   }).scroll();
@@ -74,10 +140,14 @@ $(window).scroll(function() {
 
 
 
+$(document).on("change", '.about_yourself_content_form_control', function(e) {
+    $('.about_yourself_content_form_label').text(e.target.files[0].name)
+})
 
 
 
 // acording start
+
 var acc = document.getElementsByClassName("desing_development_content_item_desc_acordion_card_title");
 var i;
 for (i = 0; i < acc.length; i++) {
@@ -113,7 +183,29 @@ $('.service_left_content_nav_item_link').mouseenter(function () {
 
 $('.about_slider_content').slick({
     arrows: true,
-    infinite:true,
+    infinite: true,
+    dots: false,
+    prevArrow: `
+    <button class="about_content_btn--left about_content_btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 9.966 16.907">
+            <path id="Path_733" data-name="Path 733" d="M23.356,13.529l7.678,7.678,1.532-1.57L25.7,12.753,32.566,5.87,31.035,4.3l-7.678,7.678-.756.775Z" transform="translate(-22.6 -4.3)"/>
+        </svg>
+    </button>`,
+    nextArrow: `
+    <button class="about_content_btn--right about_content_btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 12.576 21.333">
+            <g id="noun_Arrow_1252229" transform="translate(12.576 21.333) rotate(180)">
+                 <path id="Path_733" data-name="Path 733" d="M.954,11.645l9.688,9.688,1.933-1.981L3.913,10.667l8.662-8.686L10.643,0,.954,9.688,0,10.667Z" transform="translate(0 0)"/>
+            </g>
+        </svg>
+    </button>
+    `,
+})
+
+
+$('.about_content_dots').slick({
+    arrows: true,
+    infinite: true,
     dots: false,
     prevArrow: `
     <button class="about_content_btn--left about_content_btn">
@@ -134,7 +226,7 @@ $('.about_slider_content').slick({
         {
           breakpoint: 992,
           settings: {
-            dots: true
+             dots: true,
           }
         },
     ]
@@ -144,9 +236,7 @@ $('.about_slider_content').slick({
 $('.blog_posts_content').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    // arrows: true,
-    // centerMode: true,
-    // centerPadding:'50px',
+    infinite: true,
     dots: true,
     responsive: [
         {
@@ -165,7 +255,7 @@ $('.blog_posts_content').slick({
 
 
 $('.expertise_content').slick({
-    infinite:true,
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows:true,
@@ -196,13 +286,13 @@ $slickElement.on('init reInit afterChange', function(event, slick, currentSlide,
 
 
 $('.team_slideshow').slick({
-    infinity: true,
+    infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: true,
+    dots:false,
     prevArrow: $('.prev'),
 	nextArrow: $('.next'),
-    // dots: true,
     centerMode: true,
     centerPadding: '80px',
     responsive: [
@@ -212,7 +302,7 @@ $('.team_slideshow').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
     ]
@@ -230,10 +320,10 @@ $slickElement.on('init reInit afterChange', function(event, slick, currentSlide,
 $('.case_studies_slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    infinite: true,
     arrows: true,
     prevArrow: $('.prev'),
 	nextArrow: $('.next'),
-    // dots: true,
     centerMode: true,
     centerPadding: '500px',
     responsive: [
@@ -260,6 +350,7 @@ $('.case_studies_slider').slick({
     ]
 })
 $('.hardwareDistribution_content_right_body_slide').slick({
+    infinite: true,
     arrows: true,
     dots:true,
     prevArrow: `
@@ -282,6 +373,7 @@ $('.hardwareDistribution_content_right_body_slide').slick({
 
 
 $('.hardwareDistributionCategories_body_category_items').slick({
+    infinite: true,
     arrows: true,
     dots:true,
     prevArrow: `
@@ -300,8 +392,8 @@ $('.hardwareDistributionCategories_body_category_items').slick({
     </button>
     `
 })
+
 //sliders finished 
 
 
 
-AOS.init();

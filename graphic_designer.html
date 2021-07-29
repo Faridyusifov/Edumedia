@@ -15,107 +15,104 @@
     <meta property="og:image" content="./img/sidebar-icon.png">
     <meta property="og:url" content="edumedia.az">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
     <link rel="shortcut icon" href="./img/favicon (2).ico">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div id="sidebar" class="sidebar sidebar_bg_light">
-        <div class="sidebar_body">
-            <div class="sidebar_btn" title="Toggle button" id="open_menu_btn">
-                <div class="bar1 sidebar_menu_icon sidebar_menu_icon_clr_dark"></div>
-				<div class="bar2 sidebar_menu_icon sidebar_menu_icon_clr_dark"></div>        
-			</div>
-            <a href="index.html" class="sidebar_icon">
-                <img src="./img/sidebar-icon.png" alt="">
-                <p class="sidebar_icon_text sidebar_icon_text_clr">edumedia</p>                  
-            </a>
-            <div class="customer_btn_light">
-                <a class="customerLink customer_btn_clr" href="contact.html">
-					Müştərimiz ol
-					<svg xmlns="http://www.w3.org/2000/svg" width="18.162" height="18.162" viewBox="0 0 18.162 18.162">
-						<g id="noun_Left_1920800" transform="translate(29.617 16.393) rotate(135)">
-						  <path id="Path_19" data-name="Path 19" d="M8.492,25.684l.792-.809L4.662,20.253H16.2V19.131H4.662l4.622-4.622L8.492,13.7,2.5,19.692Z" transform="translate(0 0)" fill="#151515"/>
-						</g>
-					</svg>
-				</a>
+    <div class="app">
+        <div id="sidebar" class="sidebar sidebar_bg_light">
+            <div class="sidebar_body">
+                <div class="sidebar_btn" title="Toggle button" id="open_menu_btn">
+                    <div class="bar1 sidebar_menu_icon sidebar_menu_icon_clr_dark"></div>
+                    <div class="bar2 sidebar_menu_icon sidebar_menu_icon_clr_dark"></div>        
+                </div>
+                <a href="index.html" class="sidebar_icon">
+                    <img src="./img/sidebar-icon.png" alt="">
+                    <p class="sidebar_icon_text sidebar_icon_text_clr">edumedia</p>                  
+                </a>
+                <a href="contact.html" class="customer_btn_light">
+                    <div class="customerLink customer_btn_clr">
+                        Müştərimiz ol
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18.162" height="18.162" viewBox="0 0 18.162 18.162">
+                            <g id="noun_Left_1920800" transform="translate(29.617 16.393) rotate(135)">
+                              <path id="Path_19" data-name="Path 19" d="M8.492,25.684l.792-.809L4.662,20.253H16.2V19.131H4.662l4.622-4.622L8.492,13.7,2.5,19.692Z" transform="translate(0 0)" fill="#151515"/>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
             </div>
-			<!-- <div class="edumedia_logo">
-				<img src="./img/edumedia_icon_black.png" alt="page-icon">                      
-			</div> -->
         </div>
-    </div>
-	<div id="onclick_sidebar" class="onclick_sidebar" >
-		<div class="onclick_sidebar_body">
-            <div class="onclick_sidebar_top">
-				<div class="onclick_sidebar_lang">
-					<a href="#" class="onclick_sidebar_lang_item">AZ</a>
-					<a href="#" class="onclick_sidebar_lang_item">ENG</a>
+        <div id="onclick_sidebar" class="onclick_sidebar" >
+			<div class="onclick_sidebar_body">
+				<div class="onclick_sidebar_top">
+					<div class="onclick_sidebar_lang">
+						<a href="#" class="onclick_sidebar_lang_item">AZ</a>
+						<a href="#" class="onclick_sidebar_lang_item active">ENG</a>
+					</div>
+					<ul class="onclick_sidebar_header">
+						<li class="onclick_sidebar_header_item">
+							<a href="#">Facebook</a>
+						</li>
+						<li class="onclick_sidebar_header_item">
+							<a href="#">LinkedIn</a>
+						</li>
+						<li class="onclick_sidebar_header_item">
+							<a href="#">Instagram</a>
+						</li>
+					</ul>
 				</div>
-				<ul class="onclick_sidebar_header">
-					<li class="onclick_sidebar_header_item">
-						<a href="#">Facebook</a>
+				<ul class="onclick_sidebar_content">
+					<li class="onclick_sidebar_content_item">
+						<a href="index.html" class="onclick_sidebar_content_item_link active">Home</a>
 					</li>
-					<li class="onclick_sidebar_header_item">
-						<a href="#">LinkedIn</a>
+					<li class="onclick_sidebar_content_item">
+						<a href="service.html" class="onclick_sidebar_content_item_link">Services</a>
 					</li>
-					<li class="onclick_sidebar_header_item">
-						<a href="#">Instagram</a>
+					<li class="onclick_sidebar_content_item">
+						<a href="case_studies.html" class="onclick_sidebar_content_item_link">Case Studies</a>
+					</li>
+					<li class="onclick_sidebar_content_item">
+						<a href="about.html" class="onclick_sidebar_content_item_link">About Us</a>
+					</li>
+					<li class="onclick_sidebar_content_item">
+						<a href="blog.html" class="onclick_sidebar_content_item_link">Blog</a>
+					</li>
+					<li class="onclick_sidebar_content_item">
+						<a href="careers.html" class="onclick_sidebar_content_item_link">Careers</a>
 					</li>
 				</ul>
+				<div class="onclick_sidebar_footer">
+					<div class="onclick_section_footer">
+						<a href="contact.html" class="btn onclick_mobile_section_footer_btn">
+							Get in touch
+							<svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
+								<g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
+									<path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)" fill="#151515"></path>
+								</g>
+								</svg>
+							</a>
+					</div>
+					<div class="onclick_sidebar_footer_body">
+						<a href="index.html" class="footer_center_icon">
+							<img src="./img/page icon.png" alt="page icon">
+						</a>
+						<div class="footer_center_adress">
+							<p>
+								34, Khatai Avenue,  Luxen Plaza, <br> Baku, AZ1008, Azerbaijan
+							</p>
+						</div>
+						<div class="footer_center_contact">
+							<a class="footer_center_contact_mail" href="#">info@edumedia.az</a>
+						</div>
+					</div>
+				</div>
 			</div>
-            <ul class="onclick_sidebar_content">
-                <li class="onclick_sidebar_content_item">
-                    <a href="index.html" class="onclick_sidebar_content_item_link active">Home</a>
-                </li>
-                <li class="onclick_sidebar_content_item">
-                    <a href="service.html" class="onclick_sidebar_content_item_link">Services</a>
-                </li>
-                <li class="onclick_sidebar_content_item">
-                    <a href="case_studies.html" class="onclick_sidebar_content_item_link">Case Studies</a>
-                </li>
-                <li class="onclick_sidebar_content_item">
-                    <a href="about.html" class="onclick_sidebar_content_item_link">About Us</a>
-                </li>
-                <li class="onclick_sidebar_content_item">
-                    <a href="blog.html" class="onclick_sidebar_content_item_link">Blog</a>
-                </li>
-                <li class="onclick_sidebar_content_item">
-                    <a href="careers.html" class="onclick_sidebar_content_item_link">Careers</a>
-                </li>
-            </ul>
-            <div class="onclick_sidebar_footer">
-                <a href="index.html" class="footer_center_icon">
-                    <img src="./img/page icon.png" alt="">
-				</a>
-                <div class="footer_center_adress">
-                    <p>
-                        34, Khatai Avenue,  Luxen Plaza, <br> Baku, AZ1008, Azerbaijan
-                    </p>
-                </div>
-                <div class="footer_center_contact">
-                    <a class="footer_center_contact_mail" href="#">info@edumedia.az</a>
-                </div>
-            </div>
-			<div class="onclick_section_footer">
-				<a href="contact.html" class="btn onclick_mobile_section_footer_btn">
-					Get in touch
-					<svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
-						<g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
-							<path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)" fill="#151515"></path>
-						</g>
-						</svg>
-					</a>
-			</div>
-        </div>
-    </div>
-    <div class="container" id="container">
-        <div class="bgColor" data-color="white">
-            <div class="section page_header pd_mobile">
+		</div>
+        <div class="container" id="container">
+            <div class="section page_header bgColor pd_mobile" data-color="white">
                 <div class="page_header_top">
                     <ul class="page_breadcrumb">
                         <li class="page_breadcrumb_item">
@@ -140,16 +137,14 @@
                     </div>
                 </div>
             </div>
-            <div class="section page_img pd_mobile_0" data-aos="fade-up">
+            <div class="section page_img bgColor pd_mobile_0" data-color="white">
                 <div class="page_img_main pd_top100_mobile">
                     <div class="page_img_body">
                         <img src="./img/graphic desiner img.png" alt="">
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bgColor" data-color="black">
-            <div class="section designer_overview pd_mobile" data-aos="fade-up">
+            <div class="section designer_overview bgColor fadeUp pd_mobile" data-color="black">
                 <div class="designer_overview_content">
                     <h1 class="designer_overview_content_head">Senior Digital Designer Overview</h1>
                     <p class="designer_overview_content_desc">Edumedia is looking for a passionate, experienced UI/UX designer to join our in-house creative team in the heart of Silicon Valley. Your primary role is to create elevated, high-fidelity website design concepts for brands across multiple industries. You thrive in a collaborative environment with other talented and driven individuals and are hungry to take your creative and leadership skills to the next level.</p>
@@ -179,24 +174,30 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bgColor" data-color="white">
-            <div class="section about_yourself pd_mobile" data-aos="fade-up">
+            <div class="section about_yourself bgColor fadeUp pd_mobile" data-color="white">
                 <div class="about_yourself_header">
                     <h1 class="about_yourself_header_head">Apply now and tell us about yourself.</h1>
                 </div>
                 <div class="about_yourself_content">
                     <form action="#">
-                        <label for="name">What is your name?</label>
-                        <input type="text" id="name" placeholder="Your name and surname" class="contact_input">
-                        <label for="number">What is your phone number?</label>
-                        <input type="text" id="number" placeholder="e.g +994 50 890 90 00" class="contact_input">
-                        <label for="email">What is your email?</label>
-                        <input type="text" id="email" placeholder="e.g example@corporate.com" class="contact_input">
-                        <label for="cv">Attach your CV</label>
-                        <div class="about_yourself_content_form_file">
-                            <label class="about_yourself_content_form_label" for="cv">pdf</label>
-                            <input type="file" class="about_yourself_content_form_control">
+                        <div class="formItem">
+                            <label for="name">What is your name?</label>
+                            <input type="text" id="name" placeholder="Your name and surname" class="contact_input">
+                        </div>
+                        <div class="formItem">
+                            <label for="number">What is your phone number?</label>
+                            <input type="text" id="number" placeholder="e.g +994 50 890 90 00" class="contact_input">
+                        </div>
+                        <div class="formItem">
+                            <label for="email">What is your email?</label>
+                            <input type="text" id="email" placeholder="e.g example@corporate.com" class="contact_input">
+                        </div>
+                        <div class="formItem">
+                            <label for="cv">Attach your CV</label>
+                            <div class="about_yourself_content_form_file">
+                                <label class="about_yourself_content_form_label" for="cv">pdf</label>
+                                <input type="file" class="about_yourself_content_form_control">
+                            </div>
                         </div>
                         <a href="#" type="submit" class="contact_btn">
                             Send
@@ -209,100 +210,101 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="section footer pd_mobile">
-            <div class="footer_content">
-                <div class="footer_top">
-                    <div class="footer_explore">
-                        <h2 class="footer_head">EXPLORE</h2>
-                        <ul class="footer_explore_nav">
-                            <li class="footer_explore_nav_item">
-                                <a href="about.html">About Us</a>
-                            </li>
-                            <li class="footer_explore_nav_item">
-                                <a href="service.html">Services</a>
-                            </li>
-                            <li class="footer_explore_nav_item">
-                                <a href="case_studies.html">Case Studies</a>
-                            </li>
-                            <li class="footer_explore_nav_item">
-                                <a href="blog.html">Blog</a>
-                            </li>
-                            <li class="footer_explore_nav_item">
-                                <a href="careers.html">Career</a>
-                            </li>
-                            <li class="footer_explore_nav_item">
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer_follow_us">
-                        <h2 class="footer_head">FOLLOW US </h2>
-                        <ul class="follow_us_nav"> 
-                            <li class="follow_us_nav_item">
-                                <a href="#">
-                                    Facebook
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
-                                        <g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
-                                            <path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="follow_us_nav_item">
-                                <a href="#">
-                                    LinkedIn
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
-                                        <g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
-                                            <path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="follow_us_nav_item">
-                                <a href="#">
-                                    Instagram
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
-                                        <g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
-                                            <path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer_center">
-                    <a href="index.html" class="footer_center_icon">
-                        <img src="./img/page icon.png" alt="">
-                    </a>
-                    <div class="footer_center_adress">
-                        <p>
-                            34, Khatai Avenue, <br> Luxen Plaza, Baku, <br> AZ1008, Azerbaijan
-                        </p>
-                    </div>
-                    <div class="footer_center_contact">
-                        <p class="footer_center_contact_number">+994 12 496 90 94</p>
-                        <a class="footer_center_contact_mail" href="mailto::info@edumedia.az">info@edumedia.az</a>
-                    </div>
-                </div>
-                <div class="footer_bottom">
-                    <ul class="footer_bottom_nav">
-                        <li class="footer_bottom_nav_item">
-                            <a href="privacyPolicy.html">Privacy Policy</a>
-                        </li>
-                        <li class="footer_bottom_nav_item">
-                            <a href="siteMap.html">Sitemap</a>
-                        </li>
-                    </ul>
-                    <p class="footer_tag">@Edumedia 2021</p>
-                </div>
-            </div>
+            <div class="section footer pd_mobile">
+				<div class="footer_content">
+					<div class="footer_top">
+						<div class="footer_explore">
+							<h2 class="footer_head">EXPLORE</h2>
+							<ul class="footer_explore_nav">
+								<li class="footer_explore_nav_item">
+									<a href="about.html">About Us</a>
+								</li>
+								<li class="footer_explore_nav_item">
+									<a href="service.html">Services</a>
+								</li>
+								<li class="footer_explore_nav_item">
+									<a href="case_studies.html">Case Studies</a>
+								</li>
+								<li class="footer_explore_nav_item">
+									<a href="blog.html">Blog</a>
+								</li>
+								<li class="footer_explore_nav_item">
+									<a href="careers.html">Career</a>
+								</li>
+								<li class="footer_explore_nav_item">
+									<a href="contact.html">Contact</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer_follow_us">
+							<h2 class="footer_head">FOLLOW US </h2>
+							<ul class="follow_us_nav"> 
+								<li class="follow_us_nav_item">
+									<a href="https://www.facebook.com/edumedia.azerbaijan">
+										Facebook
+										<svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
+											<g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
+												<path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li class="follow_us_nav_item">
+									<a href="https://www.linkedin.com/company/edumedia-azerbaijan-llc/?originalSubdomain=tr">
+										LinkedIn
+										<svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
+											<g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
+												<path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+								<li class="follow_us_nav_item">
+									<a href="https://www.instagram.com/edumediaaz/">
+										Instagram
+										<svg xmlns="http://www.w3.org/2000/svg" width="15.467" height="9.707" viewBox="0 0 15.467 9.707">
+											<g id="noun_Left_1920800" transform="translate(9.967 23.407) rotate(180)">
+												<path id="Path_19" data-name="Path 19" d="M7.354,23.407,8,22.752,4.252,19.008H17.966V18.1H4.252L8,14.355,7.354,13.7,2.5,18.554Z" transform="translate(-8 0)"></path>
+											</g>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer_center">
+						<a href="index.html" class="footer_center_icon">
+							<img src="./img/page icon.png" alt="">
+						</a>
+						<div class="footer_center_adress">
+							<p>
+								34, Khatai Avenue, <br> Luxen Plaza, Baku, <br> AZ1008, Azerbaijan
+							</p>
+						</div>
+						<div class="footer_center_contact">
+							<a href="tel:+994124969094" class="footer_center_contact_number">+994 12 496 90 94</a>
+							<a class="footer_center_contact_mail" href="mailto::info@edumedia.az">info@edumedia.az</a>
+						</div>
+					</div>
+					<div class="footer_bottom">
+						<ul class="footer_bottom_nav">
+							<li class="footer_bottom_nav_item">
+								<a href="privacyPolicy.html">Privacy Policy</a>
+							</li>
+							<li class="footer_bottom_nav_item">
+								<a href="siteMap.html">Sitemap</a>
+							</li>
+						</ul>
+						<div class="footer_bottom_right">
+							<p class="footer_tag">@Edumedia 2021</p>
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./dist/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="main.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>
