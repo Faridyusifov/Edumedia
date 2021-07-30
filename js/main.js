@@ -1,5 +1,5 @@
 let lastScrollTop;
-var $body = $('body');
+// var $body = $('body');
 
 $(document).on('click', '.sidebar_btn', function (e) {
     e.preventDefault()
@@ -17,16 +17,14 @@ $(document).on('click', '.sidebar_btn', function (e) {
 function handleScrollAnimation() {
 	var $window         = $(window),
 		$app            = $('.app'),
-		scrollElements  = $('[data-section-theme]'),
+		scrollElements  = $('[data-color]'),
 		scrollIn        = $window.scrollTop() + ($window.height() - ($window.height() / 5)),
 		scrollOut       = $window.scrollTop() + ($window.height())
-        scrollInScrolled  = $window.width() > 992 ? $window.scrollTop() + ($window.height() - 200) : $window.scrollTop() + ($window.height() - 100),
 		scrollOutScrolled = $window.scrollTop() + ($window.height())
 
 	scrollElements.each(function () {
 		var $this = $(this);
 		if ($this.position().top <= scrollIn && $this.position().top + $this.height() > scrollIn ) {
-			$app.attr('class', $(this).data('section-theme'));
 			$this.addClass("scrolled");
 		}
 		else if ($this.position().top <= scrollOut + $this.height() - 3 && $this.position().top + $this.height() > scrollOut + $this.height() - 3 ) {
@@ -66,9 +64,6 @@ $(document).on('scroll', function () {
 
 
 
-
-
-
 $(document).ready(function(){
     $("#button").click(function() {
         $('html, body').animate({
@@ -76,11 +71,6 @@ $(document).ready(function(){
         }, 800);
     });
 });
-
-
-const SidebarOpenLight = (x) => {
-    x.classList.toggle("change");
-}
 
 
 
@@ -98,8 +88,7 @@ $('.banner_content_item').mouseleave(function () {
 
 
 $(window).scroll(function() {
-  
-    // selectors
+      // selectors
     var $window = $(window),
         $body = $('.app'),
         $panel = $('.bgColor');
@@ -111,9 +100,9 @@ $(window).scroll(function() {
     $panel.each(function () {
       var $this = $(this);
 
-      // if position is within range of this panel.
+      // if position is wixthin range of this panel.
       // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
-      // Remember we set the scroll to 50% earlier in scroll var.
+      // Remember we set the scroll to 33% earlier in scroll var.
       if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
         // Remove all classes on body with color-
         $body.removeClass(function (index, css) {
@@ -124,19 +113,8 @@ $(window).scroll(function() {
         $body.addClass('color-' + $(this).data('color'));
       }
 
-      if ($this.position().top <= ($window.scrollTop() + ($window.height() - 150)) && $this.position().top + $this.height() > ($window.scrollTop() + ($window.height() - 150))) {
-        $this.addClass("scrolled")
-      }
-      else if ($this.position().top <= ($window.scrollTop() + ($window.height() + $this.height())) && $this.position().top + $this.height() >= ($window.scrollTop() + ($window.height() + $this.height()))) {
-        $this.removeClass("scrolled")
-      }
-      
     });    
-    
   }).scroll();
-
-
-
 
 
 
@@ -148,20 +126,15 @@ $(document).on("change", '.about_yourself_content_form_control', function(e) {
 
 // acording start
 
-var acc = document.getElementsByClassName("desing_development_content_item_desc_acordion_card_title");
-var i;
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        this.classList.toggle("acordion_card_title_change");
-        var desing_development_content_item_desc_acordion_card_text = this.nextElementSibling;
-        if (desing_development_content_item_desc_acordion_card_text.style.maxHeight) {
-            desing_development_content_item_desc_acordion_card_text.style.maxHeight = null;
-        } else {
-            desing_development_content_item_desc_acordion_card_text.style.maxHeight = desing_development_content_item_desc_acordion_card_text.scrollHeight + "px";
-        }
-    });
-}
+$('.desing_development_content_item_desc_acordion_card_title').click(function () {
+    $(this).parents('.desing_development_content_item_desc_acordion').find('.desing_development_content_item_desc_acordion_card').not($(this).parents('.desing_development_content_item_desc_acordion_card')).removeClass('open')
+    $(this).parents('.desing_development_content_item_desc_acordion').find('.desing_development_content_item_desc_acordion_card').not($(this).parents('.desing_development_content_item_desc_acordion_card')).children(".desing_development_content_item_desc_acordion_card_text").hide('200')
+    $(this).parents('.desing_development_content_item_desc_acordion_card').toggleClass('open')
+    $(this).parent().children('.desing_development_content_item_desc_acordion_card_text').toggle('200')
+})
+
 //acording finished
+
 
 
 

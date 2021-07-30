@@ -45,6 +45,7 @@ body{
     --color-191919: #191919;
     --color-888888: #888888;
     --color-707070: #707070;
+    background-color: var(--color-151515);
     min-height: 100vh;
 }
 .app.color-white {
@@ -1325,7 +1326,7 @@ li {
     padding-left: 0;
 } */
 .footer_bottom_nav_item a {
-    color: #676767;
+    color: var(--color-707070);
     font-size: 14px;
     line-height: 16px;
 }
@@ -1338,7 +1339,7 @@ li {
     padding: 10px;
 }
 .footer_tag {
-    color: var(--color-676767);
+    color: var(--color-707070);
     font-size: 14px;
     line-height: 16px;
 }
@@ -1352,7 +1353,7 @@ li {
 /* service page bashlayirrr */
 
 .page_header {
-    padding: 124px 70px 20px 70px;
+    padding: 124px 70px 0px 70px;
 }
 .page_breadcrumb {
     display: flex;
@@ -1392,8 +1393,8 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .page_header_topic {
     max-width: 60%;
@@ -1677,9 +1678,9 @@ li {
 
 /* about us bashlayir */
 
-.page_breadcrumb_item_clr:last-child a {
+/* .page_breadcrumb_item_clr:last-child a {
     color: #151515;
-}
+} */
 .page_header_topic_font {
     font-size: 50px;
 }
@@ -1697,9 +1698,9 @@ li {
     margin-left: 20px;
     max-width: 40%;
 }
-.about_slider {
+/* .about_slider {
     padding-top: 50px;
-}
+} */
 .about_slider_content_item--img {
     width: 100%;
 }
@@ -2548,7 +2549,9 @@ textarea::placeholder {
 /* graphic designer bashlayir */
 
 .page_img {
-    padding-top: 120px;
+    padding-top: 100px;
+    margin-left: -70px;
+    margin-right: -70px;
 }
 .page_img_main {
     position: relative;
@@ -2751,8 +2754,10 @@ input.about_yourself_content_form_control {
     padding: 25px 0px;
 } */
 .desing_development_content_item_desc_acordion_card_text {
-    max-height: 0;
+    /* max-height: 0; */
     overflow: hidden;
+    display: none;
+    width: 100% !important;
     transition: max-height 0.2s ease-out;
 }
 .desing_development_content_item_desc_acordion_card_text p{
@@ -2778,9 +2783,15 @@ input.about_yourself_content_form_control {
     transform: rotate(-135deg);
     transition: all 0.3s;
 } */
-.acordion_card_title_change{
+.desing_development_content_item_desc_acordion_card.open .desing_development_content_item_desc_acordion_card_title{
     color: var(--color-ffffff);
 }
+.desing_development_content_item_desc_acordion_card.open .desing_development_content_item_desc_acordion_card_title::after{
+    transform: rotate(225deg);
+}
+/* .desing_development_content_item_desc_acordion_card.open .desing_development_content_item_desc_acordion_card_text{
+    max-height: unset;
+} */
 .acordion_card_title_change::after{
     transform: rotate(-135deg);
     transition: all 0.3s;
@@ -2804,7 +2815,7 @@ input.about_yourself_content_form_control {
 .desing_development_desc {
     display: flex;
     align-items: center;
-    padding-bottom: 130px;
+    padding-bottom: 40px;
 }
 .desing_development_desc_body {
     width: 50%;

@@ -42,13 +42,13 @@
     .page_header_bottom{
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 60px;
+        padding-top: 40px;
     }
     .page_header_desc{
         max-width: 100%;
         margin-left: 0;
         margin-top: 40px;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
     .section_header{
         flex-direction: column;
@@ -306,7 +306,7 @@
 
     .case_studies{
         padding-top: 70px;
-        padding-bottom: 100px;
+        padding-bottom: 70px;
         position: relative;
     }
     .case_studies_content{
@@ -670,6 +670,10 @@
 /* desing_development.html start */
 
 @media screen and (max-width:992px){
+    .page_img{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
     .page_img_body img{
         width: unset;
     }
