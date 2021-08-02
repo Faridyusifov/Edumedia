@@ -104,7 +104,7 @@ $(window).scroll(function() {
       // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
       // Remember we set the scroll to 33% earlier in scroll var.
       if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-        // Remove all classes on body with color-
+        // Remove all classes on body with color-cc  y2 q;4
         $body.removeClass(function (index, css) {
           return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
         });
@@ -129,7 +129,7 @@ $(document).on("change", '.about_yourself_content_form_control', function(e) {
 $('.desing_development_content_item_desc_acordion_card_title').click(function () {
     $(this).parents('.desing_development_content_item_desc_acordion').find('.desing_development_content_item_desc_acordion_card').not($(this).parents('.desing_development_content_item_desc_acordion_card')).removeClass('open')
     $(this).parents('.desing_development_content_item_desc_acordion').find('.desing_development_content_item_desc_acordion_card').not($(this).parents('.desing_development_content_item_desc_acordion_card')).children(".desing_development_content_item_desc_acordion_card_text").hide('200')
-    $(this).parents('.desing_development_content_item_desc_acordion_card').toggleClass('open')
+    $(this).parents('.desing_development_content_item_desc_acordion_card').toggleClass('open') 
     $(this).parent().children('.desing_development_content_item_desc_acordion_card_text').toggle('200')
 })
 
