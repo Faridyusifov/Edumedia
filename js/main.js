@@ -7,7 +7,7 @@ $(document).on('click', '.sidebar_btn', function (e) {
     $('.onclick_sidebar').toggleClass('isOpen')
     $('.sidebar_btn').toggleClass('change')
     $('body').toggleClass('overflowY')
-    $('.sidebar_icon_text').toggleClass('sidebar_icon_text_clr_light')
+    // $('.sidebar_icon_text').toggleClass('sidebar_icon_text_clr_light')
     $('.sidebar').toggleClass('positionSticky')
 })
 

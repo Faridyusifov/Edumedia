@@ -145,7 +145,7 @@ li {
 }
 .scrolled {
     transform: translateY(0);
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
 }
 .black_bg {
     background-color: #151515;
@@ -1365,7 +1365,6 @@ li {
     line-height: 20px;
     opacity: 100%;
     letter-spacing: 0.26px;
-    margin-left: -4px;
     /* padding: 0px 4px; */
 }
 .page_breadcrumb_item a:hover {
@@ -2150,9 +2149,7 @@ li {
     margin: 0px 10px;
 }
 .filter_content_item_img {
-    width: 100%;
     height: 100%;
-    max-width: 100%;
 }
 .filter_content_item_desc {
     display: flex;
