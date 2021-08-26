@@ -11,12 +11,14 @@ $(document).on('click', '.sidebar_btn', function (e) {
     $('.sidebar').toggleClass('positionSticky')
 })
 
-
+// $(document).ready(function(){
+//     $(this).scrollTop(0,0);
+// });
 
 
 function handleScrollAnimation() {
 	var $window         = $(window),
-		$app            = $('.app'),
+		// $app            = $('.app'),
 		scrollElements  = $('[data-color]'),
 		scrollIn        = $window.scrollTop() + ($window.height() - ($window.height() / 5)),
 		scrollOut       = $window.scrollTop() + ($window.height())
