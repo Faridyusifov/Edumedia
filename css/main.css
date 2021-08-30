@@ -540,6 +540,7 @@ li {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    align-items: flex-start;
     height: 100%;
 }
 .header_desc {
@@ -553,7 +554,7 @@ li {
 }
 .arrow {
     z-index: 8900;
-    /* margin-bottom: 60px; */
+    cursor: pointer;
 }
 .header_link {
     display: none;
@@ -2149,6 +2150,7 @@ li {
     margin: 0px 10px;
 }
 .filter_content_item_img {
+    width: 100%;
     height: 100%;
 }
 .filter_content_item_desc {
@@ -2549,8 +2551,8 @@ textarea::placeholder {
 
 .page_img {
     padding-top: 100px;
-    margin-left: -70px;
-    margin-right: -70px;
+    /* margin-left: -70px;
+    margin-right: -70px; */
 }
 .page_img_main {
     position: relative;

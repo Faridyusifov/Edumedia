@@ -670,10 +670,10 @@
 /* desing_development.html start */
 
 @media screen and (max-width:992px){
-    .page_img{
+    /* .page_img{
         margin-right: -15px;
         margin-left: -15px;
-    }
+    } */
     .page_img_body img{
         width: unset;
     }

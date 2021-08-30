@@ -70,7 +70,7 @@ $(document).ready(function(){
     $("#button").click(function() {
         $('html, body').animate({
             scrollTop: $(".banner").offset().top
-        }, 800);
+        }, 1000);
     });
 });
 
