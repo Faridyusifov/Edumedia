@@ -1355,6 +1355,7 @@ li {
 
 .page_header {
     padding: 124px 70px 0px 70px;
+    /* height: 100vh; */
 }
 .page_breadcrumb {
     display: flex;
@@ -2551,8 +2552,8 @@ textarea::placeholder {
 
 .page_img {
     padding-top: 100px;
-    /* margin-left: -70px;
-    margin-right: -70px; */
+    margin-left: -70px;
+    margin-right: -70px;
 }
 .page_img_main {
     position: relative;

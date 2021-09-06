@@ -45,12 +45,6 @@ $.fn.scrollEnd = function(callback, timeout) {
 	});
 };
 
-function navbarScrollEndFn() {
-	$('.sidebar').removeClass('add')
-	$(window).scrollEnd(function () {
-		$('.sidebar').addClass('add')
-	}, 100);
-}
 
 $(document).on('scroll', function () {
     
@@ -63,6 +57,14 @@ $(document).on('scroll', function () {
 	}
     lastScrollTop = st <= 0 ? 0 : st;
 })
+
+
+function navbarScrollEndFn() {
+	$('.sidebar').removeClass('add')
+	$(window).scrollEnd(function () {
+		$('.sidebar').addClass('add')
+	}, 100);
+}
 
 
 
@@ -97,7 +99,7 @@ $(window).scroll(function() {
     
     // Change 50% earlier than scroll position so colour is there when you arrive.
     var scroll = $window.scrollTop() + ($window.height() / 2);
-    var scroll2 = $window.scrollTop() + ($window.height() - 150);
+    // var scroll2 = $window.scrollTop() + ($window.height() - 150);
    
     $panel.each(function () {
       var $this = $(this);
