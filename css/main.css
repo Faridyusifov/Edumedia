@@ -681,6 +681,7 @@ li {
 .banner_content_item {
     display: flex;
     flex: 0 0 50%;
+    max-width: 50%;
     color: var(--color-d9d9d9);
     /* height: 100%; */
     padding: 25px 0px;
@@ -692,6 +693,7 @@ li {
     width: 65%;
     /* opacity: .25; */
     cursor: pointer;
+    word-wrap: break-word;
 }
 .banner_content_item_body h2 {
     /* width: 30%; */
@@ -1803,6 +1805,10 @@ li {
 }
 .team_slideshow_item {
     padding: 0px 20px;
+    cursor: grab;
+}
+.team_slideshow_item:active{
+    cursor: grabbing;
 }
 /* .team_slideshow_item_body {
     margin: 0px 20px;
@@ -2212,9 +2218,6 @@ li {
     max-width: 60%;
 }
 .careers_main_nav_item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
     border-bottom: 1px solid var(--color-303030);
 }
@@ -2225,6 +2228,9 @@ li {
     padding: 33px 0px;
     display: block;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .careers_main_nav_item:hover a{
     color: var(--color-00aeef);

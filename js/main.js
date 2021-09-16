@@ -31,7 +31,7 @@ function handleScrollAnimation() {
 		}
 		else if ($this.position().top <= scrollOut + $this.height() - 3 && $this.position().top + $this.height() > scrollOut + $this.height() - 3 ) {
 			$this.removeClass("scrolled");
-		}
+		}  
 	});
 }
 
@@ -73,6 +73,9 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: $(".banner").offset().top
         }, 1000);
+    });
+    $(document).ready(function(){
+        $(this).scrollTop(0);
     });
 });
 

@@ -27,6 +27,9 @@
     .contact_right{
         padding-left: 140px;
     }
+    .banner_content_item_body h2{
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width:1200px){
@@ -986,5 +989,13 @@
         height: 100%;
         padding-bottom: 50px;
         padding-top: 50px;
+    }
+}
+
+
+
+@media screen and (min-width:1600px){
+    .about_content_desc_body_item{
+        width: 80%;
     }
 }
