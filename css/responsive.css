@@ -33,8 +33,8 @@
 }
 
 @media screen and (max-width:1200px){
-    .case_studies_slider{
-        margin-left: -175px;
+    .case_studies_content_item{
+        margin: 0 0 0 -160px;
     }
 }
 /* same start */
@@ -316,8 +316,8 @@
         margin-bottom: 40px;
         margin-top: 20px;
     }
-    .case_studies_slider{
-        margin-left: -55px;
+    .case_studies_content_item{
+        margin: 0 0 0 -50px;
     }
     .case_studies_content_item{
         padding: 0px 10px;
@@ -673,10 +673,10 @@
 /* desing_development.html start */
 
 @media screen and (max-width:992px){
-    /* .page_img{
+    .page_img{
         margin-right: -15px;
         margin-left: -15px;
-    } */
+    }
     .page_img_body img{
         width: unset;
     }

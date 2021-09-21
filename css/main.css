@@ -889,16 +889,24 @@ li {
 .case_studies_content {
     overflow: hidden;
 }
-.case_studies_slider {
+/* .case_studies_slider {
     margin-left: -515px;
-}
+} */
 .case_studies_slider .slick-track{
     transition: none;
 }
 .case_studies_content_item {
-    padding: 0px 15px;
-    /* transition: all 0.4s; */
+    padding-right: 15px;
+    width: 100%;
+    display: inline-block;
+    margin: 0 0 0 -300px;
 }
+.case_studies_slider_item > div {
+    height: 100%;
+}
+/* .case_studies_slider_item{
+    margin-left: -300px;
+} */
 .case_studies_content_item_body{
     overflow: hidden;
 }

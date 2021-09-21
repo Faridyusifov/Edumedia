@@ -305,7 +305,7 @@ $('.case_studies_slider').slick({
     prevArrow: $('.prev'),
 	nextArrow: $('.next'),
     centerMode: true,
-    centerPadding: '500px',
+    centerPadding: '300px',
     responsive: [
         {
             breakpoint: 1200,
