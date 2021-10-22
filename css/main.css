@@ -1850,6 +1850,7 @@ li {
 .team_info_group {
     padding: 50px;
     background: var(--color-191919);
+    margin-right: 70px;
 }
 .team_info_group_content{
     display: flex;
