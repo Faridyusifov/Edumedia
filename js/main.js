@@ -161,26 +161,26 @@ $('.service_left_content_nav_item_link').mouseenter(function () {
 
 // sliderss starts
 
-$('.about_slider_content').slick({
-    arrows: true,
-    infinite: true,
-    dots: false,
-    prevArrow: `
-    <button class="about_content_btn--left about_content_btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 9.966 16.907">
-            <path id="Path_733" data-name="Path 733" d="M23.356,13.529l7.678,7.678,1.532-1.57L25.7,12.753,32.566,5.87,31.035,4.3l-7.678,7.678-.756.775Z" transform="translate(-22.6 -4.3)"/>
-        </svg>
-    </button>`,
-    nextArrow: `
-    <button class="about_content_btn--right about_content_btn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 12.576 21.333">
-            <g id="noun_Arrow_1252229" transform="translate(12.576 21.333) rotate(180)">
-                 <path id="Path_733" data-name="Path 733" d="M.954,11.645l9.688,9.688,1.933-1.981L3.913,10.667l8.662-8.686L10.643,0,.954,9.688,0,10.667Z" transform="translate(0 0)"/>
-            </g>
-        </svg>
-    </button>
-    `,
-})
+// $('.about_slider_content').slick({
+//     arrows: true,
+//     infinite: true,
+//     dots: false,
+//     prevArrow: `
+//     <button class="about_content_btn--left about_content_btn">
+//         <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 9.966 16.907">
+//             <path id="Path_733" data-name="Path 733" d="M23.356,13.529l7.678,7.678,1.532-1.57L25.7,12.753,32.566,5.87,31.035,4.3l-7.678,7.678-.756.775Z" transform="translate(-22.6 -4.3)"/>
+//         </svg>
+//     </button>`,
+//     nextArrow: `
+//     <button class="about_content_btn--right about_content_btn">
+//         <svg xmlns="http://www.w3.org/2000/svg" width="12.576" height="21.333" viewBox="0 0 12.576 21.333">
+//             <g id="noun_Arrow_1252229" transform="translate(12.576 21.333) rotate(180)">
+//                  <path id="Path_733" data-name="Path 733" d="M.954,11.645l9.688,9.688,1.933-1.981L3.913,10.667l8.662-8.686L10.643,0,.954,9.688,0,10.667Z" transform="translate(0 0)"/>
+//             </g>
+//         </svg>
+//     </button>
+//     `,
+// })
 
 
 $('.about_content_dots').slick({
@@ -289,7 +289,7 @@ $('.team_slideshow').slick({
 })
 
 var $status = $('.pagingInfo');
-var $slickElement = $('.case_studies_slider');
+var $slickElement = $('.case_studies_content');
 
 $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
     //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
@@ -297,20 +297,20 @@ $slickElement.on('init reInit afterChange', function(event, slick, currentSlide,
     $status.text(i + '/' + slick.slideCount);
 });
 
-$('.case_studies_slider').slick({
+$('.case_studies_content').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
     arrows: true,
     prevArrow: $('.prev'),
 	nextArrow: $('.next'),
-    centerMode: true,
-    centerPadding: '300px',
+    // centerMode: true,
+    // centerPadding: '300px',
     responsive: [
         {
             breakpoint: 1200,
             settings: {
-              centerPadding: '160px',
+            //   centerPadding: '160px',
               slidesToShow: 1,
               slidesToScroll: 1,
               infinite: true,
@@ -320,7 +320,7 @@ $('.case_studies_slider').slick({
         {
           breakpoint: 992,
           settings: {
-            centerPadding: '50px',
+            // centerPadding: '50px',
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
